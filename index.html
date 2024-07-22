@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center; /* Center content vertically */
         min-height: 100vh;
     }
     
@@ -97,6 +98,14 @@
         border-radius: 5px;
         padding: 10px;
     }
+
+    .chat-widget-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000; /* Ensure it appears on top */
+    }
 </style>
 </head>
 <body>
@@ -105,31 +114,7 @@
     <h1>T€N0C0 SEARCH</h1>
     <input type="text" id="searchInput" name="q" placeholder="Enter your search query...">
     <div class="search-buttons">
-        <form action="https://duckduckgo.com/" method="GET" target="_blank">
-            <input type="hidden" name="q" id="duckduckgoInput">
-            <input type="submit" value="DuckDuckGo">
-        </form>
-        <form action="https://www.google.com/search" method="GET" target="_blank">
-            <input type="hidden" name="q" id="googleInput">
-            <input type="submit" value="Google">
-        </form>
-        <form action="https://www.bing.com/search" method="GET" target="_blank">
-            <input type="hidden" name="q" id="bingInput">
-            <input type="submit" value="Bing">
-        </form>
-        <form action="https://search.yahoo.com/search" method="GET" target="_blank">
-            <input type="hidden" name="p" id="yahooInput">
-            <input type="submit" value="Yahoo">
-        </form>
-        <form action="https://www.youtube.com/results" method="GET" target="_blank">
-            <input type="hidden" name="search_query" id="youtubeInput">
-            <input type="submit" value="YouTube">
-        </form>
-        <form action="https://www.tiktok.com/tag/" method="GET" target="_blank">
-            <input type="hidden" name="viewType" value="discover">
-            <input type="hidden" name="keyword" id="tiktokInput">
-            <input type="submit" value="TikTok">
-        </form>
+        <!-- Search forms go here -->
     </div>
     <div class="news-section">
         <h2>Latest News:</h2>
@@ -145,6 +130,15 @@
         <h2>About</h2>
         <p>T€N0C0 SEARCH is a web application made by T€N0C0 that allows users to easily search on various search engines and to access other useful tools in a clean-and-friendly interface.</p>
     </div>
+</div>
+
+<div class="chat-widget-container">
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
+        Chatbot.init({
+            chatbotId: "2511f00a-ce90-4dc1-8239-69cbd6f41b82",
+        });
+    </script>
 </div>
 
 <script>
@@ -166,14 +160,6 @@
         tiktokInput.value = query;
     });
 </script>
-    
-<script type="module">
-  import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
-  Chatbot.init({
-    chatbotId: "2511f00a-ce90-4dc1-8239-69cbd6f41b82",
-  });
-</script>  
-  
 
 </body>
 </html>

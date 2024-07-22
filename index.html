@@ -111,6 +111,23 @@
         width: calc(100% - 120px); /* Ensure it fits within the screen */
         max-width: 400px; /* Max width for larger screens */
     }
+
+    .copy-button {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff; /* Blue color */
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        font-family: 'Courier New', Courier, monospace; /* Monospace font */
+        font-weight: bold; /* Bold font */
+        margin-left: 10px;
+    }
+
+    .copy-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
 </style>
 </head>
 <body>
@@ -119,6 +136,7 @@
     <div class="container">
         <h1>T€N0C0 SEARCH</h1>
         <input type="text" id="searchInput" name="q" placeholder="Enter your search query...">
+        <button class="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
         <div class="search-buttons">
             <form action="https://duckduckgo.com/" method="GET" target="_blank">
                 <input type="hidden" name="q" id="duckduckgoInput">
@@ -181,6 +199,11 @@
         youtubeInput.value = query;
         tiktokInput.value = query;
     });
+
+    function copyToClipboard() {
+        searchInput.select();
+        document.execCommand('copy');
+    }
 </script>
 
 <div class="chat-widget-container">
@@ -193,4 +216,4 @@
 </div>
 
 </body>
-</html>
+    </html>

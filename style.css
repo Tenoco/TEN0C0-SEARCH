@@ -1,0 +1,123 @@
+body {
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.scroll-container {
+    display: flex;
+    min-width: 100vw; /* Ensure the container takes full viewport width */
+    flex-wrap: nowrap;
+}
+
+.container {
+    text-align: center;
+    min-width: 100vw; /* Ensure each section takes full viewport width */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-weight: bold; /* Bold font */
+}
+
+.search-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-buttons form {
+    margin: 0;
+}
+
+.search-buttons input[type="submit"] {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-weight: bold; /* Bold font */
+}
+
+.search-buttons input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.tools {
+    margin-top: 20px;
+}
+
+.tools a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.about {
+    margin-top: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.news-section {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.news-section h2 {
+    font-size: 1.5em;
+}
+
+.news-section iframe {
+    width: 80%; /* Reduced width */
+    height: 400px; /* Reduced height */
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.chat-widget-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    z-index: 1000; /* Ensures the chat widget stays on top */
+    width: calc(100% - 120px); /* Ensure it fits within the screen */
+    max-width: 400px; /* Max width for larger screens */
+}
+
+.copy-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    font-weight: bold; /* Bold font */
+    margin-left: 10px;
+}
+
+.copy-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

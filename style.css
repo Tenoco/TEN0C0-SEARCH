@@ -22,7 +22,7 @@ h1 {
     font-size: 2.5em;
 }
 
-input[type="text"] {
+input[type='text'] {
     width: 300px;
     padding: 10px;
     margin: 20px 0;
@@ -46,7 +46,7 @@ input[type="text"] {
     margin: 0;
 }
 
-.search-buttons input[type="submit"] {
+.search-buttons input[type='submit'] {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -58,7 +58,7 @@ input[type="text"] {
     font-weight: bold; /* Bold font */
 }
 
-.search-buttons input[type="submit"]:hover {
+.search-buttons input[type='submit']:hover {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
@@ -87,24 +87,6 @@ input[type="text"] {
     font-size: 1.5em;
 }
 
-.news-section iframe {
-    width: 80%; /* Reduced width */
-    height: 400px; /* Reduced height */
-    border: 2px solid #007bff; /* Blue border */
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.chat-widget-container {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 10px;
-    z-index: 1000; /* Ensures the chat widget stays on top */
-    width: calc(100% - 120px); /* Ensure it fits within the screen */
-    max-width: 400px; /* Max width for larger screens */
-}
-
 .copy-button {
     padding: 10px 15px;
     border: none;
@@ -120,4 +102,12 @@ input[type="text"] {
 
 .copy-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+
+.news-section iframe {
+    width: 80%; /* Reduced width */
+    height: 400px; /* Reduced height */
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    padding: 10px;
 }

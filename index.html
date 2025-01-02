@@ -3,78 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T€N0C0 SEARCH</title>
-    <meta name="description" content="T€N0C0 SEARCH is a web application that allows users to search on various engines and access useful tools in a clean interface.">
-    <link rel="icon" href="tenocosearch.jpeg" type="image/jpeg">
+    <meta name="description" content="TENOCO SEARCH is a powerful search engine interface that allows you to surf the web seamlessly using multiple search engines in a clean and user-friendly interface.">
+    <meta name="keywords" content="TENOCO SEARCH, search engine, web search, images, videos, Bing, Yandex, user-friendly">
+    <meta name="author" content="TENOCO Team">
+    <title>TENOCO SEARCH</title>
+    <link rel="icon" type="image/png" href="tenocosearch.jpeg">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap">
 </head>
 <body>
-
-<div class="scroll-container">
     <div class="container">
-        <h1>T€N0C0 SEARCH</h1>
-        <input type="text" id="searchInput" name="q" placeholder="Enter your search query...">
-        <button class="copy-button" onclick="copyToClipboard()">Copy to Clipboard</button>
-        <div class="search-buttons">
-            <form action="https://duckduckgo.com/" method="GET" target="_blank">
-                <input type="hidden" name="q" id="duckduckgoInput">
-                <input type="submit" value="DuckDuckGo">
-            </form>
-            <form action="https://www.google.com/search" method="GET" target="_blank">
-                <input type="hidden" name="q" id="googleInput">
-                <input type="submit" value="Google">
-            </form>
-            <form action="https://www.bing.com/search" method="GET" target="_blank">
-                <input type="hidden" name="q" id="bingInput">
-                <input type="submit" value="Bing">
-            </form>
-            <form action="https://search.yahoo.com/search" method="GET" target="_blank">
-                <input type="hidden" name="p" id="yahooInput">
-                <input type="submit" value="Yahoo">
-            </form>
-            <form action="https://www.youtube.com/results" method="GET" target="_blank">
-                <input type="hidden" name="search_query" id="youtubeInput">
-                <input type="submit" value="YouTube">
-            </form>
-            <form action="https://www.tiktok.com/tag/" method="GET" target="_blank">
-                <input type="hidden" name="viewType" value="discover">
-                <input type="hidden" name="keyword" id="tiktokInput">
-                <input type="submit" value="TikTok">
-            </form>
+        <header>
+            <h1>TENOCO SEARCH</h1>
+            <div class="social-buttons">
+                <button id="aboutButton" class="social-button">
+                    <i class="fas fa-info-circle"></i> About
+                </button>
+                <a href="https://t.me/tenocoofficial" target="_blank" class="social-button">
+                    <i class="fab fa-telegram"></i> Join Telegram
+                </a>
+                <a href="https://whatsapp.com/channel/0029VaJMAov0QeajHa2s3w1W" target="_blank" class="social-button">
+                    <i class="fab fa-whatsapp"></i> Join WhatsApp
+                </a>
+            </div>
+        </header>
+        
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search the web...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="search-types">
+                <button class="tab-button active" data-type="web">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+                <button class="tab-button" data-type="images">
+                    <i class="fas fa-images"></i> Images
+                </button>
+                <button class="tab-button" data-type="videos">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+            </div>
+
+            <div class="engine-selector">
+                <button class="engine-button active" data-engine="bing">
+                    <i class="fab fa-microsoft"></i> Bing
+                </button>
+                <button class="engine-button" data-engine="yandex">
+                    <i class="fas fa-search"></i> Yandex
+                </button>
+            </div>
         </div>
 
-        <!-- Anchor ad placement -->
-        <ins class="adsbygoogle"
-            style="display:block; width:320px; height:50px;"
-            data-ad-client="ca-pub-2828633374400735"
-            data-ad-slot="YOUR_AD_SLOT_ID"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-        <div class="news-section">
-            <h2>Latest News:</h2>
-            <iframe src="https://www.bing.com/news" width=100% height=500px frameborder=0></iframe>
+        <div class="results-container">
+            <div class="loading-overlay">
+                <i class="fas fa-spinner fa-spin"></i>
+            </div>
+            <iframe id="searchResults" title="Search Results" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" referrerpolicy="no-referrer"></iframe>
         </div>
-        <div class=tools>
-            <h2>Other tools:</h2>
-            <a href=https://translate.google.com/>Google Translate</a> 
-            <a href=https://www.bing.com/images/create>Bing Image Creator</a> 
-            <a href=https://chat.openai.com/>ChatGPT</a> 
-        </div> 
-        <div class=about> 
-          <h2>About</h2> 
-          <p>T€N0C0 SEARCH is a web application made by T€N0C0 that allows users to easily search on various search engines and to access other useful tools in a clean-and-friendly interface.</p> 
-        </div> 
-    </div> 
-</div>
+    </div>
 
-<script src=script.js></script>
-
-<div class=chat-widget-container> 
-  <script> window.embeddedChatbotConfig = { chatbotId: "q7NAP_zC_B_P6qds9z0kM", domain: "www.chatbase.co"}; </script> 
-  <script src=https://www.chatbase.co/embed.min.js chatbotId=q7NAP_zC_B_P6qds9z0kM domain=www.chatbase.co defer></script> 
-</div>
-
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>About TENOCO SEARCH</h2>
+            <p>TENOCO SEARCH is a powerful search engine interface designed for surfing the web with multiple search engines in a clean and friendly interface. Our platform provides seamless access to various search engines while maintaining a streamlined, user-friendly experience.</p>
+            <div class="social-links">
+                <h3>Join Our Community</h3>
+                <p>Get support and services for the TENOCO products:</p>
+                <div class="social-buttons">
+                    <a href="https://t.me/tenocoofficial" target="_blank" class="social-button">
+                        <i class="fab fa-telegram"></i> Join Telegram
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VaJMAov0QeajHa2s3w1W" target="_blank" class="social-button">
+                        <i class="fab fa-whatsapp"></i> Join WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

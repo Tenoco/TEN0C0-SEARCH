@@ -17,12 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             web: 'https://www.bing.com/search',
             images: 'https://www.bing.com/images/search',
             videos: 'https://www.bing.com/videos/search'
-        },
-        yandex: {
-            web: 'https://yandex.com/search',
-            images: 'https://yandex.com/images/search',
-            videos: 'https://yandex.com/video/search'
         }
+        
     };
 
     // Modal functionality
@@ -55,9 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'bing':
                 params.append('q', query);
                 break;
-            case 'yandex':
-                params.append('text', query);
-                break;
+            
         }
         
         return params.toString();

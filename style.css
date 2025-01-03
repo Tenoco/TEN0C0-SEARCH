@@ -5,8 +5,7 @@
     --input-background: #2C2C2E;
     --hover-color: #0056b3;
     --bing-blue: #008373;
-    --yandex-red: #FF0000;
-    --startpage-green: #5FA536;
+   
 }
 
 * {
@@ -145,13 +144,6 @@ h1 {
     background-color: var(--bing-blue);
 }
 
-.engine-button[data-engine="yandex"].active {
-    background-color: var(--yandex-red);
-}
-
-.engine-button[data-engine="startpage"].active {
-    background-color: var(--startpage-green);
-}
 
 .results-container {
     width: 100%;
